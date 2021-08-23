@@ -1,0 +1,25 @@
+﻿#pragma kernel Histogram
+
+Texture2D<float4> _Source;
+
+RWStructuredBuffer<uint> _Histogram;
+int _HistogramBins;
+
+float _LwMin;
+float _LwMax;
+
+[numthreads(8, 8, 1)]
+void Histogram(uint3 id : SV_DispatchThreadID)
+{
+	// Compute luminance value (log scale)
+	float4 color = _Source[id.xy];
+	float lum = (0.2126 * color.r) + (0.7152 * color.g) + (0.0722 * color.b);
+	float logLum = log(lum + 0.00001);
+	float logMin = log(_LwMin + 0.00001);
+	float logMax = log(_LwMax + 0.00001);
+
+	float normalizedLogLum = (logLum - logMin) / (logMax - logMin);
+	int bin = (int)(normalizedLogLum * (float)(_HistogramBins - 1));
+
+	InterlockedAdd(_Histogram[bin], 1);
+}

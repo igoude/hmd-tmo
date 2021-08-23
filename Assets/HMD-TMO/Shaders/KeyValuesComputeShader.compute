@@ -1,0 +1,23 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel KeyValues
+
+Texture2D<float4> _Source;
+RWStructuredBuffer<uint> _KeyValues;
+
+[numthreads(8, 8, 1)]
+void KeyValues(uint3 id : SV_DispatchThreadID)
+{
+	// Compute luminance value (log scale)
+	// Min value : -5.0
+	// Max value : 10.0
+	float4 color = _Source[id.xy];
+	float lum = (0.2126 * color.r) + (0.7152 * color.g) + (0.0722 * color.b);
+
+	float logLum = log(lum + 0.00001);
+	float normalizedLogLum = (logLum + 5.0) / 15.0;
+	uint lumIntEncode = (uint)(normalizedLogLum * pow(2, 10));
+
+	InterlockedMin(_KeyValues[0], lumIntEncode);
+	InterlockedMax(_KeyValues[1], lumIntEncode);
+	InterlockedAdd(_KeyValues[2], lumIntEncode);
+}
