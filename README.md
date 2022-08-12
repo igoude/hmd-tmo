@@ -2,11 +2,11 @@
 
 Unity project of [HMD-TMO: A Tone Mapping Operator for 360° HDR Images Visualization for Head Mounted Displays](https://hal.archives-ouvertes.fr/hal-02301430).
 
-> "HMD-TMO: A Tone Mapping Operator for 360 HDR Images Visualization for Head Mounted Displays; I. Goudé, R. Cozot, F. Banterle; Computer Graphics International Conference (2019), 216-227"
+> "HMD-TMO: A Tone Mapping Operator for 360 HDR Images Visualization for Head Mounted Displays; I. Goudé, R. Cozot, F. Banterle; Computer Graphics International Conference (2019), 216-227; https://doi.org/10.1007/978-3-030-22514-8_18"
 
 Extended in TCS journal: [A Perceptually Coherent TMO for Visualization of 360° HDR Images on HMD](https://hal.archives-ouvertes.fr/hal-02912340)
 
-> "A Perceptually Coherent TMO for Visualization of 360° HDR Images on HMD; I. Goudé, R. Cozot, O. Le Meur; Transactions on Computational Science XXXVII (2020), 109-128"
+> "A Perceptually Coherent TMO for Visualization of 360° HDR Images on HMD; I. Goudé, R. Cozot, O. Le Meur; Transactions on Computational Science XXXVII (2020), 109-128; https://doi.org/10.1007/978-3-662-61983-4_7"
 
 ## Requirements
 
@@ -62,10 +62,7 @@ Our method enhances ﬁne details and removes the clipping in high luminance.
 
 ## Contact
 
-> PERCEPT Team - IRISA Rennes <br />
-Email: percept@irisa.fr
-
 > Ific Goudé <br />
-PhD student <br />
-Team Percept - IRISA <br />
-Email: ific.goude@irisa.fr
+Research Scientist in Computer Graphics <br />
+Email: goude.ific@gmail.com <br />
+Website: [https://igoude.github.io/](https://igoude.github.io/)
