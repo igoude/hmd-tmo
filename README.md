@@ -1,6 +1,6 @@
 # HMD-TMO
 
-Unity project of [HMD-TMO: A Tone Mapping Operator for 360° HDR Images Visualization for Head Mounted Displays](https://hal.archives-ouvertes.fr/hal-02301430).
+Unity project of [HMD-TMO: A Tone Mapping Operator for 360° HDR Images Visualization for Head Mounted Displays](https://hal.archives-ouvertes.fr/hal-02301430)
 
 > "HMD-TMO: A Tone Mapping Operator for 360 HDR Images Visualization for Head Mounted Displays; I. Goudé, R. Cozot, F. Banterle; Computer Graphics International Conference (2019), 216-227; https://doi.org/10.1007/978-3-030-22514-8_18"
 
